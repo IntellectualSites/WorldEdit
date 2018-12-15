@@ -31,7 +31,7 @@ public class ForgeItemRegistry implements ItemRegistry {
     @Nullable
     @Override
     public BaseItem createFromId(String id) {
-        Item match = Item.REGISTRY.getObject(new ResourceLocation(id));
+        Item match = Item.REGISTRY.get(new ResourceLocation(id));
         if (match != null) {
             return new BaseItem(ItemTypes.get(id));
         } else {
